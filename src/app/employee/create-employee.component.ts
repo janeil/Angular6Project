@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { AbstractEmitterVisitor } from '@angular/compiler/src/output/abstract_emitter';
-import { validateConfig } from '@angular/router/src/config';
-import { elementStyleProp } from '@angular/core/src/render3';
+import { CustomValidators } from '../shared/custom.validators';
 //import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
@@ -79,7 +77,7 @@ export class CreateEmployeeComponent implements OnInit {
     const phoneFormControl = this.employeeForm.get('phone');
 
     if (selectedValue == 'email') {
-      emailFormControl.setValidators([Validators.required, emailDomain('domain.com')]);
+      emailFormControl.setValidators([Validators.required, CustomValidators.emailDomain('domain.com')]);
     } else {
       emailFormControl.clearValidators();
     }
@@ -135,14 +133,3 @@ export class CreateEmployeeComponent implements OnInit {
 
 }
 
-function emailDomain(domainName: string) {
-  return (control: AbstractControl): { [key: string]: any } | null => {
-    const email: string = control.value;
-    const domain = email.substring(email.lastIndexOf('@') + 1);
-    if (email === '' || domain.toLowerCase() === domainName.toLowerCase()) {
-      return null;
-    } else {
-      return { 'emailDomain': true };
-    }
-  };
-}
