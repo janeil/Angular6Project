@@ -67,6 +67,10 @@ export class CreateEmployeeComponent implements OnInit {
     (<FormArray>this.employeeForm.get('skills')).push(this.addSkillFormGroup());
   }
 
+  removeSkillButtonClick(skillGroupIndex: number): void {
+    (<FormArray>this.employeeForm.get('skills')).removeAt(skillGroupIndex);
+  }
+
   addSkillFormGroup(): FormGroup{
     return this.fb.group({
       skillName: ['', Validators.required],
