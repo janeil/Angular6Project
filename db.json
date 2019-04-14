@@ -2,7 +2,31 @@
     "employees": [
         {
             "id": 1,
-            "fullname": "Mark",
+            "fullName": "Mark",
+            "contactPreference": "email",
+            "email": "mark@email.com",
+            "phone": "09212172773",
+            "skills": [
+                {
+                    "skillName": "JAVA",
+                    "experienceInYears": "1",
+                    "proficiency": "beginner"
+                },
+                {
+                    "skillName": "PHP",
+                    "experienceInYears": "1",
+                    "proficiency": "intermmediate"
+                },
+                {
+                    "skillName": "LINQ",
+                    "experienceInYears": "1",
+                    "proficiency": "advanced"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "fullName": "Mark",
             "contactPreference": "email",
             "email": "mark@email.com",
             "phone": "09212172773",
