@@ -93,7 +93,7 @@
                 </span>
               </div>
               <div class="col-sm-6" *ngIf="employeeForm.get('skills').length > 1">
-                <button type="button" class="btn btn-danger btn-sm pull-right" title="Delete Skill" (click)="removeSkillButtonClick()">
+                <button type="button" class="btn btn-danger btn-sm pull-right" title="Delete Skill" (click)="removeSkillButtonClick(i)">
                   <span class="glyphicon glyphicon-remove"></span>
                 </button>
               </div>
