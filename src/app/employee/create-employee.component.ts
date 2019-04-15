@@ -93,6 +93,20 @@ export class CreateEmployeeComponent implements OnInit {
       },
       phone: employee.phone
     })
+
+    this.employeeForm.setControl('skills', this.setExistingSkill(employee.skills));
+  }
+
+  setExistingSkill(skillSets: ISkill[]): FormArray {
+    const formArray = new FormArray([]);
+    skillSets.forEach(s => {
+      formArray.push(this.fb.group({
+        skillName: s.skillName,
+        experienceInYears: s.experienceInYears,
+        proficiency: s.proficiency
+      }));
+    });
+    return formArray;
   }
 
   addSKillButtonClick(): void {
@@ -100,7 +114,10 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   removeSkillButtonClick(skillGroupIndex: number): void {
-    (<FormArray>this.employeeForm.get('skills')).removeAt(skillGroupIndex);
+    const skillsFormArray = <FormArray>this.employeeForm.get('skills');
+    skillsFormArray.removeAt(skillGroupIndex);
+    skillsFormArray.markAsDirty();
+    skillsFormArray.markAsTouched();
   }
 
   addSkillFormGroup(): FormGroup {
@@ -217,7 +234,7 @@ function matchEmail(group: AbstractControl): { [key: string]: any } | null {
   const emailControl = group.get('email');
   const confirmEmailControl = group.get('confirmEmail');
 
-  if (emailControl.value === confirmEmailControl.value || (confirmEmailControl.pristine && 
+  if (emailControl.value === confirmEmailControl.value || (confirmEmailControl.pristine &&
                                                            confirmEmailControl.value === '')) {
     return null;
   } else {
