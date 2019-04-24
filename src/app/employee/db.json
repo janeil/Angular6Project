@@ -23,6 +23,26 @@
                     "proficiency": "advanced"
                 }
             ]
+        },
+        {
+            "id": 2,
+            "fullname": "Janeil",
+            "contactPreference": "Phone",
+            "email": "janeil@domain.com",
+            "phone": "09106395616",
+            "skills": [
+                {
+                    "skillName": "PHP",
+                    "experienceInYears": "1",
+                    "proficiency": "advanced"
+                },
+                {
+                    "skillName": "PHP",
+                    "experienceInYears": "1",
+                    "proficiency": "advanced"
+                }
+            ]
         }
+
     ]
 }

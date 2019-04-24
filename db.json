@@ -1,52 +1,70 @@
 {
-    "employees": [
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "asdasd",
+      "contactPreference": "phone",
+      "phone": "09212172773",
+      "skills": [
         {
-            "id": 1,
-            "fullName": "Mark",
-            "contactPreference": "email",
-            "email": "mark@email.com",
-            "phone": "09212172773",
-            "skills": [
-                {
-                    "skillName": "JAVA",
-                    "experienceInYears": "1",
-                    "proficiency": "beginner"
-                },
-                {
-                    "skillName": "PHP",
-                    "experienceInYears": "1",
-                    "proficiency": "intermmediate"
-                },
-                {
-                    "skillName": "LINQ",
-                    "experienceInYears": "1",
-                    "proficiency": "advanced"
-                }
-            ]
+          "skillName": "sasd",
+          "experienceInYears": "2",
+          "proficiency": "advanced"
         },
         {
-            "id": 2,
-            "fullName": "Mark",
-            "contactPreference": "email",
-            "email": "mark@email.com",
-            "phone": "09212172773",
-            "skills": [
-                {
-                    "skillName": "JAVA",
-                    "experienceInYears": "1",
-                    "proficiency": "beginner"
-                },
-                {
-                    "skillName": "PHP",
-                    "experienceInYears": "1",
-                    "proficiency": "intermmediate"
-                },
-                {
-                    "skillName": "LINQ",
-                    "experienceInYears": "1",
-                    "proficiency": "advanced"
-                }
-            ]
+          "skillName": "PHP",
+          "experienceInYears": "23",
+          "proficiency": "advanced"
         }
-    ]
+      ],
+      "email": "janeilalcano01@domain.com"
+    },
+    {
+      "id": 2,
+      "fullName": "Mark1",
+      "contactPreference": "phone",
+      "phone": "555",
+      "skills": [
+        {
+          "skillName": "s",
+          "experienceInYears": "2",
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "asd",
+          "experienceInYears": "23",
+          "proficiency": "intermediate"
+        }
+      ],
+      "email": "janeil@domain.com"
+    },
+    {
+      "id": 3,
+      "fullName": "Janeil",
+      "contactPreference": "email",
+      "email": "janeilalcano@domain.com",
+      "phone": "09212172773",
+      "skills": [
+        {
+          "skillName": "JAVA",
+          "experienceInYears": "1",
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fullName": "BrieLarson",
+      "contactPreference": "email",
+      "email": "brie@domain.com",
+      "phone": "9212172773",
+      "skills": [
+        {
+          "skillName": "Cap  Marvel",
+          "experienceInYears": "1",
+          "proficiency": "advanced"
+        }
+      ]
+    }
+  ]
 }
